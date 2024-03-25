@@ -1,0 +1,23 @@
+@baseUri=http://127.0.0.1:8069
+@apiKey=xxx
+
+### ping
+GET {{baseUri}}/
+
+### rag search
+POST {{baseUri}}/rag-search
+Content-Type: application/json
+Authorization: Bearer {{apiKey}}
+
+{
+    "query": "ThinkAny.AI",
+    "search_n": 10,
+    "search_provider": "google",
+    "is_reranking": true,
+    "is_detail": true,
+    "detail_min_score": 0.7,
+    "detail_top_k": 3,
+    "is_filter": true,
+    "filter_min_score": 0.8,
+    "filter_top_k": 6
+}
