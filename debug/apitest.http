@@ -14,10 +14,10 @@ Authorization: Bearer {{apiKey}}
     "search_n": 10,
     "search_provider": "google",
     "is_reranking": true,
-    "is_detail": true,
+    "is_detail": false,
     "detail_min_score": 0.7,
     "detail_top_k": 3,
-    "is_filter": true,
+    "is_filter": false,
     "filter_min_score": 0.8,
     "filter_top_k": 6
 }

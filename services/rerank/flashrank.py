@@ -14,7 +14,7 @@ def get_rerank_results(query, search_results):
         for i, result in enumerate(search_results):
             text = result["snippet"]
             if "content" in result and len(result["content"]) > len(result["snippet"]):
-                text = result["content"]
+                text = result['title'] + "\n" + text
 
             passages.append(
                 {
@@ -30,7 +30,7 @@ def get_rerank_results(query, search_results):
         rerank_results = []
         for i, flash_result in enumerate(flash_results):
             rerank_result = search_results[flash_result["id"]]
-            rerank_result["score"] = flash_result["score"]
+            rerank_result["score"] = float(flash_result["score"])
             rerank_results.append(rerank_result)
     except Exception as e:
         print(f"reranking search results failed: {e}")
