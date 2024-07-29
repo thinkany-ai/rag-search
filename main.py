@@ -3,6 +3,7 @@ from contextlib import asynccontextmanager
 from components.log import init_log, log
 from components.env import init_env
 from handlers.rag_search import rag_router
+from handlers.reranking import reranking_router
 
 
 def startup():
@@ -27,6 +28,7 @@ async def lifespan(app: FastAPI):
 
 app = FastAPI(lifespan=lifespan)
 app.include_router(rag_router)
+app.include_router(reranking_router)
 
 
 @app.get("/")

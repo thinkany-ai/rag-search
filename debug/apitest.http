@@ -21,3 +21,49 @@ Authorization: Bearer {{apiKey}}
     "filter_min_score": 0.8,
     "filter_top_k": 6
 }
+
+### reranking
+POST {{baseUri}}/reranking
+Content-Type: application/json
+Authorization: Bearer {{apiKey}}
+
+{
+    "query": "what is ThinkAny",
+    "search_results": [
+      {
+        "title": "ThinkAny AI - LinkedIn",
+        "link": "https://hk.linkedin.com/in/thinkany-ai-3bb267300",
+        "snippet": "Experience: ThinkAny · Location: Hong Kong. View ThinkAny AI's profile on LinkedIn, a professional community of 1 billion members.",
+        "position": 1,
+        "uuid": "88c7c8b192437cb3025bf3afd3ce6fa7"
+      },
+      {
+        "title": "ThinkAny - AI Search Engine",
+        "link": "https://thinkany.ai/",
+        "snippet": "ThinkAny is a free AI search engine using advanced RAG vector search for precise, trusted answers, with interactive AI assistant chat for comprehensive user ...",
+        "position": 2,
+        "uuid": "5209e9df294fc9d8fdf20a023b1a561c"
+      },
+      {
+        "title": "thinkany-ai - GitHub",
+        "link": "https://github.com/thinkany-ai",
+        "snippet": "Skip to content. Navigation Menu. Toggle navigation. Sign in · thinkany-ai. Product. Actions. Automate any workflow · Packages. Host and manage packages.",
+        "position": 3,
+        "uuid": "f20e53a4367b053f4eb88fb462670e1b"
+      },
+      {
+        "title": "ThinkAny - AI Search Engine And 39 Other AI Alternatives For ...",
+        "link": "https://theresanaiforthat.com/ai/thinkany-ai-search-engine/",
+        "snippet": "ThinkAny is an advanced AI-powered search engine bringing together quality content retrieval and innovative AI-driven answering capabilities ...",
+        "position": 4,
+        "uuid": "c23fbd932565c797c907687794fe412b"
+      },
+      {
+        "title": "ThinkAny: The AI Search Engine Revolution - Supertools",
+        "link": "https://supertools.therundown.ai/content/thinkany",
+        "snippet": "ThinkAny is an advanced AI search engine that combines RAG technology with intelligent answering capabilities to deliver high-quality content and efficient ...",
+        "position": 5,
+        "uuid": "d5c608a64e72e76b0910aabf18ef3a32"
+      }
+    ]
+}
